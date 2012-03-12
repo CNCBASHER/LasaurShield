@@ -1,5 +1,5 @@
 
-The LasaurShield is a custom PCB for the [Lasersaur project](http://lasersaur.com). It's an [Arduino](http://arduino.cc/) [shield](http://arduino.cc/en/Main/ArduinoShields) that connects laser, stepper, stepper driver, stepper power, limit switches, door sensor, water chiller sensor, emergency stop sensor, and Arduino. Starting with v11.10 the core safety functions are also hardwired on the board.
+The LasaurShield is a custom PCB for the [Lasersaur project](http://lasersaur.com). It's an [Arduino](http://arduino.cc/) [shield](http://arduino.cc/en/Main/ArduinoShields) that connects laser, stepper, stepper driver, stepper power, limit switches, door sensor, water chiller sensor, emergency stop sensor, and Arduino. Additionally core safety functions are also hardwired on the board (logic gates). The laser is forced off when any of the following occurs: door opens, chiller off or malfunctions, a limit switch triggers.
 
 The LasaurShield is designed around the SparkFun Eagle Library, their design and CAM job rules. Check out the [SparkFun Tutorial](http://www.sparkfun.com/tutorials/108) if you are new to this. If you are interesting doing your own production run check out [this tutorial](http://www.sparkfun.com/tutorials/109).
 
@@ -58,36 +58,5 @@ When creating the CAM Job (gerber files)
 - before sending these to a manufacturing house check them with [Viewplot](http://www.viewplot.com/) or by uploading a zip to [circuitpeople.com](http://circuitpeople.com/).
 
 
-
-Parts List for v11.11 Upgrade
-==============================
-
-2   resistor 10 KOhm    271-10K-RC    (making it a total of 7x)
-1   e-stop button 24mm    642-A01ES
-1   e-stop SPST block    642-A0150B
-2   NAND Gates IC    863-MC74AC20NG
-1   DIN rail 1m    651-5602100
-1   relay 277VAC@25A for DIN rail    528-725BXXSC3ML-24D
-8   terminal block for DIN rail    651-3004362
-1   terminal block side cover    651-3003020
-5   terminal block bridge    651-0201155
-1   power supply 24V for DIN rail    845-PS-6024    (replacement)
-1   power entry connector, C-20   562-744W-00/04 
-1   power entry connector, C-14   161-R30148-E
-
-
-Test for v11.11
-===============
-
-- chiller hard logic ... ok
-- limit switches hard logic ... ok
-
-- limit switch input
-- chiller input
-- overwrite
-- rel input
-
-
-git push -u origin master
 
 
